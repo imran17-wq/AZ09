@@ -88,3 +88,5 @@ for i in range(len(relu_mask)):
 dw1=np.outer(X_train[0],hidden_delta)
 db1=np.array(hidden_delta)
 lr=0.01
+w2n=w2-(lr*dw2)
+print(w2n.shape)
