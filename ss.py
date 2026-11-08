@@ -4,7 +4,6 @@ from pathlib import Path
 from PIL import Image
 import numpy as np
 from numpy.random.mtrand import rand
-# Change this to your actual dataset folder path
 DATASET_PATH = Path(r"C:\Users\dudek\Downloads\A2Z")
 images = []
 labels = []
@@ -86,7 +85,10 @@ for i in range(len(relu_mask)):
     else:
         hidden_delta.append(0)
 dw1=np.outer(X_train[0],hidden_delta)
-db1=np.array(hidden_delta)
-lr=0.01
-w2n=w2-(lr*dw2)
-print(w2n.shape)
+db1 = np.array(hidden_delta)
+lr = 0.01
+w2 = w2 - lr * dw2
+b2=b2-lr*db2
+w1=w1-lr*dw1
+bias=bias-lr*db1
+print(p)
